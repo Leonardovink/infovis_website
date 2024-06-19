@@ -17,6 +17,7 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
+
 import pandas as pd
 import geopandas as gpd
 import numpy as np
@@ -144,6 +145,11 @@ ax.legend(handles=legend_handles, loc='lower left', title='Legend')
 
 plt.show()
 import matplotlib.ticker as mtick
+df = pd.read_csv("Normalized_Dataset_edu-prisectet.csv", usecols=['Year',"GDP", 'Country', "Value", "Indicator Name",  "Indicator Code", 'Life expectancy'])
+second_df = df[df["Indicator Name"].str.contains("Lower secondary completion rate") == True]
+third_df = df[df["Indicator Name"].str.contains("Primary completion rate") == True]
+second_df.to_csv("Normalized_Dataset_edu-prisectet1.csv", index=False)
+third_df.to_csv("Normalized_Dataset_edu-prisectet2.csv", index=False)
 plt.scatter(second_df['Value'], second_df['Life expectancy'], alpha=0.3, c='green', label='Lower secondary completion rate')
 plt.scatter(third_df['Value'], third_df['Life expectancy'], alpha=0.3, c='red', label='Primary completion rate')
 plt.xlabel('Completion rate (normalized)')
@@ -183,7 +189,7 @@ plt.show()
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-[0;32m/tmp/ipykernel_45079/4035431732.py[0m in [0;36m<module>[0;34m[0m
+[0;32m/tmp/ipykernel_45891/1580431079.py[0m in [0;36m<module>[0;34m[0m
 [1;32m      1[0m [0;32mimport[0m [0mpandas[0m [0;32mas[0m [0mpd[0m[0;34m[0m[0;34m[0m[0m
 [0;32m----> 2[0;31m [0;32mimport[0m [0mgeopandas[0m [0;32mas[0m [0mgpd[0m[0;34m[0m[0;34m[0m[0m
 [0m[1;32m      3[0m [0;32mimport[0m [0mnumpy[0m [0;32mas[0m [0mnp[0m[0;34m[0m[0;34m[0m[0m

@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Your Data Story Title &#8212; Jupyter Book Template</title>
+    <title>The best way to maximize life expectancy &#8212; Jupyter Book Template</title>
   
   
   
@@ -172,7 +172,7 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Your Data Story Title</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">The best way to maximize life expectancy</a></li>
 </ul>
 
     </div>
@@ -389,7 +389,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Your Data Story Title</h1>
+    <h1>The best way to maximize life expectancy</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -401,8 +401,8 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-and-preprocessing">Dataset and Preprocessing</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-set-and-preprocessing"><strong>Data set and preprocessing</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cleaning"><strong>Cleaning</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-description"><strong>Variable description</strong></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#your-first-perspective">Your First Perspective</a><ul class="nav section-nav flex-column">
@@ -426,27 +426,28 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="your-data-story-title">
-<h1>Your Data Story Title<a class="headerlink" href="#your-data-story-title" title="Link to this heading">#</a></h1>
-<p>Student names: Leonardo Vinkestijn, SECOND_STUDENT, THIRD_STUDENT, FORTH_STUDENT</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="the-best-way-to-maximize-life-expectancy">
+<h1>The best way to maximize life expectancy<a class="headerlink" href="#the-best-way-to-maximize-life-expectancy" title="Link to this heading">#</a></h1>
+<p>Student names: Leonardo Vinkestijn, Thijn van Veen, Luca Bartling, Sebastiaan Poggenklaas</p>
+<p>Student numbers: 15254305, 15258556, 14949199, 15248348</p>
 <p>Team number: I2</p>
 <section id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<p>Over the past couple of decades, life expectancy has been increasing among industrialized countries. But if we want to increase it even further, where should we invest the most? In this project, we will research whether education should be at the top of the investment list or if we should invest in a different area, such as vaccines. We will answer this by examining the correlation between GDP, education, vaccines, and life expectancy. The data that is used for this correlation is from Kaggle and the world bank.</p>
 </section>
 <section id="dataset-and-preprocessing">
 <h2>Dataset and Preprocessing<a class="headerlink" href="#dataset-and-preprocessing" title="Link to this heading">#</a></h2>
-<section id="data-set-and-preprocessing">
-<h3><strong>Data set and preprocessing</strong><a class="headerlink" href="#data-set-and-preprocessing" title="Link to this heading">#</a></h3>
 <p>We used three data sets for this process. The most important data set is the life expectancy data set, which can be found at <a class="reference external" href="https://www.kaggle.com/datasets/amirhosseinmirzaie/countries-life-expectancy">https://www.kaggle.com/datasets/amirhosseinmirzaie/countries-life-expectancy</a>.
 This data set is the main data set used for the life expectancy and vaccination columns. The second data set used is the GDP per capita data set, which can be found at <a class="reference external" href="https://www.kaggle.com/datasets/nitishabharathi/gdp-per-capita-all-countries">https://www.kaggle.com/datasets/nitishabharathi/gdp-per-capita-all-countries</a>. This dataset contains all gdp per capita for most countries for the past 30 years, this is mainly used for correlations that can be found between life expectancy and GDP per capita. The last dataset used is the education dat set, which can be found at <a class="reference external" href="https://data.worldbank.org/topic/education">https://data.worldbank.org/topic/education</a> , information about the education level was extracted from this data set, this information consists of the number of children who attend primary and secondary school.</p>
-</section>
 <section id="cleaning">
 <h3><strong>Cleaning</strong><a class="headerlink" href="#cleaning" title="Link to this heading">#</a></h3>
 <p>Before we were able to merge these three files, some preprocessing was done. The edudata and GDP datasets have the years as variables, but the life expectancy dataset has the years as entries. To equalize this, the years in the gdp and edudata have been moved to the entries using melt.
 After all datasets had the same form, the two columns ‘learning’ and ‘GDP’ were first removed from the life expectancy data set. This was done because in the case of the learning column it was not clear how it was constructed, hence the edu dataset. The GDP column contains too many empty entries to be useful so we replaced it with the GDP data set.
 Before these datasets could be joined, the naming of countries had to be manually matched. An example of this is ‘united kingdom’ instead of ‘united kingdom of Britain and northern Ireland’. The names were equalized across all the datasets and the choropleth map we used, this was done so that the data would be displayed nicely.
 The datasets were then joined using inner join on the variables ‘years’ and ‘country names’. This produces a table with the following values, 459200 rows × 23 columns</p>
-<p><strong>Variable description</strong></p>
+</section>
+<section id="variable-description">
+<h3><strong>Variable description</strong><a class="headerlink" href="#variable-description" title="Link to this heading">#</a></h3>
 <p>Nominal
 Discrete
 Country, Country Code, Indicator Name, Indicator Code,
@@ -469,6 +470,7 @@ GDP, Total expenditure, BMI, thinness 1-19 years,Alcohol</p>
 </section>
 <section id="your-first-perspective">
 <h2>Your First Perspective<a class="headerlink" href="#your-first-perspective" title="Link to this heading">#</a></h2>
+<p>Investing in the educational sector is the best way to increase a country’s life expectancy.</p>
 <section id="the-first-argument-of-your-first-perspective">
 <h3>The First Argument of Your First Perspective<a class="headerlink" href="#the-first-argument-of-your-first-perspective" title="Link to this heading">#</a></h3>
 <p>As seen in the dataset, it’s very common for countries with a good education to also have a high life expectancy. To make it more clear, the data can be visualized in this Bivariate Choropleth: Als een land een betere educatie heeft, dan heeft een land bijna altijd een hogere life-expectancy (bron: Bivariate Choropleth)</p>
@@ -607,6 +609,11 @@ GDP, Total expenditure, BMI, thinness 1-19 years,Alcohol</p>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 <span class="kn">import</span> <span class="nn">matplotlib.ticker</span> <span class="k">as</span> <span class="nn">mtick</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;Normalized_Dataset_edu-prisectet.csv&quot;</span><span class="p">,</span> <span class="n">usecols</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span><span class="s2">&quot;GDP&quot;</span><span class="p">,</span> <span class="s1">&#39;Country&#39;</span><span class="p">,</span> <span class="s2">&quot;Value&quot;</span><span class="p">,</span> <span class="s2">&quot;Indicator Name&quot;</span><span class="p">,</span>  <span class="s2">&quot;Indicator Code&quot;</span><span class="p">,</span> <span class="s1">&#39;Life expectancy&#39;</span><span class="p">])</span>
+<span class="n">second_df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Indicator Name&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s2">&quot;Lower secondary completion rate&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span><span class="p">]</span>
+<span class="n">third_df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Indicator Name&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s2">&quot;Primary completion rate&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span><span class="p">]</span>
+<span class="n">second_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;Normalized_Dataset_edu-prisectet1.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">third_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;Normalized_Dataset_edu-prisectet2.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">second_df</span><span class="p">[</span><span class="s1">&#39;Value&#39;</span><span class="p">],</span> <span class="n">second_df</span><span class="p">[</span><span class="s1">&#39;Life expectancy&#39;</span><span class="p">],</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Lower secondary completion rate&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">third_df</span><span class="p">[</span><span class="s1">&#39;Value&#39;</span><span class="p">],</span> <span class="n">third_df</span><span class="p">[</span><span class="s1">&#39;Life expectancy&#39;</span><span class="p">],</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Primary completion rate&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Completion rate (normalized)&#39;</span><span class="p">)</span>
@@ -648,7 +655,7 @@ GDP, Total expenditure, BMI, thinness 1-19 years,Alcohol</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_45079</span><span class="o">/</span><span class="mf">4035431732.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_45891</span><span class="o">/</span><span class="mf">1580431079.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -660,9 +667,6 @@ GDP, Total expenditure, BMI, thinness 1-19 years,Alcohol</p>
 </div>
 </div>
 </div>
-<blockquote>
-<div><p><em>Figure 1: Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</em></p>
-</div></blockquote>
 </section>
 <section id="the-second-argument-of-your-first-perspective">
 <h3>The Second Argument of Your First Perspective<a class="headerlink" href="#the-second-argument-of-your-first-perspective" title="Link to this heading">#</a></h3>
@@ -837,41 +841,93 @@ GDP, Total expenditure, BMI, thinness 1-19 years,Alcohol</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">plotly.graph_objs</span> <span class="k">as</span> <span class="nn">go</span>
+<span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">curve_fit</span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">zscore</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="k">def</span> <span class="nf">log_func</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">b</span>
+
+
+<span class="c1"># Calculate the z-scores of the data</span>
+<span class="n">second_df</span><span class="p">[</span><span class="s1">&#39;z_score_GDP&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">zscore</span><span class="p">(</span><span class="n">second_df</span><span class="p">[</span><span class="s1">&#39;GDP&#39;</span><span class="p">])</span>
+<span class="n">second_df</span><span class="p">[</span><span class="s1">&#39;z_score_Value&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">zscore</span><span class="p">(</span><span class="n">second_df</span><span class="p">[</span><span class="s1">&#39;Value&#39;</span><span class="p">])</span>
+
+<span class="c1"># Define a threshold to identify outliers</span>
+<span class="n">threshold</span> <span class="o">=</span> <span class="mi">6</span>
+
+<span class="c1"># Filter the data to remove outliers</span>
+<span class="n">filtered_df</span> <span class="o">=</span> <span class="n">second_df</span><span class="p">[(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">second_df</span><span class="p">[</span><span class="s1">&#39;z_score_GDP&#39;</span><span class="p">])</span> <span class="o">&lt;</span> <span class="n">threshold</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">second_df</span><span class="p">[</span><span class="s1">&#39;z_score_Value&#39;</span><span class="p">])</span> <span class="o">&lt;</span> <span class="n">threshold</span><span class="p">)]</span>
+
+<span class="c1"># Extract cleaned data for fitting</span>
+<span class="n">x_cleaned</span> <span class="o">=</span> <span class="n">filtered_df</span><span class="p">[</span><span class="s2">&quot;GDP&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+<span class="n">y_cleaned</span> <span class="o">=</span> <span class="n">filtered_df</span><span class="p">[</span><span class="s2">&quot;Value&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+
+<span class="c1"># Fit the data to the logarithmic function</span>
+<span class="n">popt</span><span class="p">,</span> <span class="n">pcov</span> <span class="o">=</span> <span class="n">curve_fit</span><span class="p">(</span><span class="n">log_func</span><span class="p">,</span> <span class="n">x_cleaned</span><span class="p">,</span> <span class="n">y_cleaned</span><span class="p">)</span>
+
+<span class="c1"># Generate x values for the fitted line</span>
+<span class="n">x_fit</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">x_cleaned</span><span class="p">),</span> <span class="nb">max</span><span class="p">(</span><span class="n">x_cleaned</span><span class="p">),</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">y_fit</span> <span class="o">=</span> <span class="n">log_func</span><span class="p">(</span><span class="n">x_fit</span><span class="p">,</span> <span class="o">*</span><span class="n">popt</span><span class="p">)</span>
+
+<span class="c1"># Plot using Plotly</span>
+<span class="n">scatter</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">filtered_df</span><span class="p">[</span><span class="s2">&quot;GDP&quot;</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="n">filtered_df</span><span class="p">[</span><span class="s2">&quot;Value&quot;</span><span class="p">],</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;markers&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Data&#39;</span><span class="p">)</span>
+<span class="n">line</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x_fit</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y_fit</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;lines&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Fit&#39;</span><span class="p">,</span> <span class="n">line</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">))</span>
+
+<span class="n">layout</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;GDP vs. Life Expectancy (Outliers Removed)&#39;</span><span class="p">,</span>
+                   <span class="n">xaxis</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;GDP (normalized)&#39;</span><span class="p">),</span>
+                   <span class="n">yaxis</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Completion rate (normalized)&#39;</span><span class="p">))</span>
+
+
+<span class="c1"># Optionally, you can use matplotlib to show the fit</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">filtered_df</span><span class="p">[</span><span class="s1">&#39;GDP&#39;</span><span class="p">],</span> <span class="n">filtered_df</span><span class="p">[</span><span class="s1">&#39;Value&#39;</span><span class="p">],</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Data&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_fit</span><span class="p">,</span> <span class="n">y_fit</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Fit&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;GDP (normalized)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Lower secondary completion rate (normalized)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;GDP vs. Education&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_28940/2398791455.py:10: FutureWarning:
-
-The geopandas.dataset module is deprecated and will be removed in GeoPandas 1.0. You can get the original &#39;naturalearth_lowres&#39; data from https://www.naturalearthdata.com/downloads/110m-cultural-vectors/.
-
-/tmp/ipykernel_28940/2398791455.py:29: FutureWarning:
-
-Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option(&#39;future.no_silent_downcasting&#39;, True)`
-
-/tmp/ipykernel_28940/2398791455.py:61: FutureWarning:
-
-The geopandas.dataset module is deprecated and will be removed in GeoPandas 1.0. You can get the original &#39;naturalearth_lowres&#39; data from https://www.naturalearthdata.com/downloads/110m-cultural-vectors/.
-
-/tmp/ipykernel_28940/2398791455.py:95: UserWarning:
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_40485/2409927893.py:95: UserWarning:
 
 Only specify one of &#39;column&#39; or &#39;color&#39;. Using &#39;color&#39;.
 </pre></div>
 </div>
 <img alt="../_images/b267af990e596e6e65be4c9e30fd9c8baaed1fc95f40a563ac2d90560256a7b8.png" src="../_images/b267af990e596e6e65be4c9e30fd9c8baaed1fc95f40a563ac2d90560256a7b8.png" />
 <img alt="../_images/d93fe66a76ccd835123468a904286a027a5d5680e7f0bd76e9806d331ff06dec.png" src="../_images/d93fe66a76ccd835123468a904286a027a5d5680e7f0bd76e9806d331ff06dec.png" />
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_40485/2409927893.py:176: SettingWithCopyWarning:
+
+
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+
+/tmp/ipykernel_40485/2409927893.py:177: SettingWithCopyWarning:
+
+
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+</pre></div>
+</div>
+<img alt="../_images/4ab90e9cb9454638f0818e7497abdad4eb1e78e27cb27af36a1059dee20f41c0.png" src="../_images/4ab90e9cb9454638f0818e7497abdad4eb1e78e27cb27af36a1059dee20f41c0.png" />
 </div>
 </div>
-<blockquote>
-<div><p><em>Figure 3: Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</em></p>
-</div></blockquote>
-<p>Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar custosi traductores.</p>
 </section>
 </section>
 <section id="your-second-perspective">
 <h2>Your Second Perspective<a class="headerlink" href="#your-second-perspective" title="Link to this heading">#</a></h2>
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
+<p>There are other factors that have more influence on life expectancy that should be prioritized.</p>
 <section id="the-first-argument-of-your-second-perspective">
 <h3>The First Argument of Your Second Perspective<a class="headerlink" href="#the-first-argument-of-your-second-perspective" title="Link to this heading">#</a></h3>
 <p>Even though A country investing in their education program results in an increase in life expectancy. There are more direct approaches to increasing a country’s life expectancy. One possible solution is investing in increasing the country’s vaccination rate. Diseases or viruses like Polio and Diphtheria can be fatal if not treated appropriately, in some cases (like for polio) there is no cure at all. Not treating these diseases results in a drastic decrease in life expectancy. So instead of investing in education to improve life expectancy, a country should invest in vaccines as this has a more direct effect. This can be seen in the plot where it shows an increase in vaccination rate for polio and Diphtheria corresponds with an increase in life expectancy. This is also found in the research by Jenifer Ehreth. Which concludes that improving the vaccination rate is a big factor in increasing a country’s life expectancy.
@@ -955,14 +1011,10 @@ Only specify one of &#39;column&#39; or &#39;color&#39;. Using &#39;color&#39;.
 <img alt="../_images/04c4d2fdeb30128bc62b1fa0cabc0a9f0c266183891aff8cbef0b97c4b68ff5e.png" src="../_images/04c4d2fdeb30128bc62b1fa0cabc0a9f0c266183891aff8cbef0b97c4b68ff5e.png" />
 </div>
 </div>
-<blockquote>
-<div><p><em>Figure 5: Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</em></p>
-</div></blockquote>
 </section>
 </section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
-<p>Centraal Bureau voor de Statistiek. (2023). More strikes but fewer strikers in 2022. Statistics Netherlands. <a class="reference external" href="https://www.cbs.nl/en-gb/news/2023/18/more-strikes-but-fewer-strikers-in-2022">https://www.cbs.nl/en-gb/news/2023/18/more-strikes-but-fewer-strikers-in-2022</a></p>
 <p><a class="reference external" href="https://www.kaggle.com/datasets/amirhosseinmirzaie/countries-life-expectancy">https://www.kaggle.com/datasets/amirhosseinmirzaie/countries-life-expectancy</a></p>
 <p><a class="reference external" href="https://www.kaggle.com/datasets/nitishabharathi/gdp-per-capita-all-countries">https://www.kaggle.com/datasets/nitishabharathi/gdp-per-capita-all-countries</a></p>
 <p><a class="reference external" href="https://data.worldbank.org/topic/education">https://data.worldbank.org/topic/education</a></p>
@@ -1028,8 +1080,8 @@ Only specify one of &#39;column&#39; or &#39;color&#39;. Using &#39;color&#39;.
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-and-preprocessing">Dataset and Preprocessing</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-set-and-preprocessing"><strong>Data set and preprocessing</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cleaning"><strong>Cleaning</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-description"><strong>Variable description</strong></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#your-first-perspective">Your First Perspective</a><ul class="nav section-nav flex-column">
