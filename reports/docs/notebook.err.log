@@ -21,7 +21,6 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib
-from sklearn.preprocessing import MinMaxScaler
 from scipy.stats.mstats import winsorize
 data = gpd.read_file('Normalized_Dataset_EDU.csv')
 data.head()
@@ -181,14 +180,14 @@ plt.show()
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
-[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-[0;32m/tmp/ipykernel_54149/2015403128.py[0m in [0;36m<module>[0;34m[0m
-[1;32m      3[0m [0;32mimport[0m [0mmatplotlib[0m[0;34m.[0m[0mpyplot[0m [0;32mas[0m [0mplt[0m[0;34m[0m[0;34m[0m[0m
+[0;31mNameError[0m                                 Traceback (most recent call last)
+[0;32m/tmp/ipykernel_54306/3236515998.py[0m in [0;36m<module>[0;34m[0m
 [1;32m      4[0m [0;32mimport[0m [0mmatplotlib[0m[0;34m[0m[0;34m[0m[0m
-[0;32m----> 5[0;31m [0;32mfrom[0m [0msklearn[0m[0;34m.[0m[0mpreprocessing[0m [0;32mimport[0m [0mMinMaxScaler[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m      6[0m [0;32mfrom[0m [0mscipy[0m[0;34m.[0m[0mstats[0m[0;34m.[0m[0mmstats[0m [0;32mimport[0m [0mwinsorize[0m[0;34m[0m[0;34m[0m[0m
-[1;32m      7[0m [0mdata[0m [0;34m=[0m [0mgpd[0m[0;34m.[0m[0mread_file[0m[0;34m([0m[0;34m'Normalized_Dataset_EDU.csv'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      5[0m [0;32mfrom[0m [0mscipy[0m[0;34m.[0m[0mstats[0m[0;34m.[0m[0mmstats[0m [0;32mimport[0m [0mwinsorize[0m[0;34m[0m[0;34m[0m[0m
+[0;32m----> 6[0;31m [0mdata[0m [0;34m=[0m [0mgpd[0m[0;34m.[0m[0mread_file[0m[0;34m([0m[0;34m'Normalized_Dataset_EDU.csv'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      7[0m [0mdata[0m[0;34m.[0m[0mhead[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      8[0m [0mdata[0m[0;34m[[0m[0;34m'Value'[0m[0;34m][0m [0;34m=[0m [0mpd[0m[0;34m.[0m[0mto_numeric[0m[0;34m([0m[0mdata[0m[0;34m[[0m[0;34m'Value'[0m[0;34m][0m[0;34m,[0m [0merrors[0m[0;34m=[0m[0;34m'coerce'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 
-[0;31mModuleNotFoundError[0m: No module named 'sklearn'
-ModuleNotFoundError: No module named 'sklearn'
+[0;31mNameError[0m: name 'gpd' is not defined
+NameError: name 'gpd' is not defined
 
