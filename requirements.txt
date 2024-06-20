@@ -6,6 +6,6 @@ pandas
 plotly
 seaborn
 geopandas
-sklearn
+sklearn.preprocessing
 scipy
 git+git://github.com/geopandas/geopandas.git
