@@ -17,12 +17,10 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-!pip install geopandas
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib
-from adjustText import adjust_text
 import contextily as ctx
 from sklearn.preprocessing import MinMaxScaler
 from scipy.stats.mstats import winsorize
@@ -185,13 +183,13 @@ plt.show()
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-[0;32m/tmp/ipykernel_53549/2944570383.py[0m in [0;36m<module>[0;34m[0m
-[1;32m      4[0m [0;32mimport[0m [0mmatplotlib[0m[0;34m.[0m[0mpyplot[0m [0;32mas[0m [0mplt[0m[0;34m[0m[0;34m[0m[0m
-[1;32m      5[0m [0;32mimport[0m [0mmatplotlib[0m[0;34m[0m[0;34m[0m[0m
-[0;32m----> 6[0;31m [0;32mfrom[0m [0madjustText[0m [0;32mimport[0m [0madjust_text[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m      7[0m [0;32mimport[0m [0mcontextily[0m [0;32mas[0m [0mctx[0m[0;34m[0m[0;34m[0m[0m
-[1;32m      8[0m [0;32mfrom[0m [0msklearn[0m[0;34m.[0m[0mpreprocessing[0m [0;32mimport[0m [0mMinMaxScaler[0m[0;34m[0m[0;34m[0m[0m
+[0;32m/tmp/ipykernel_53684/2085183012.py[0m in [0;36m<module>[0;34m[0m
+[1;32m      3[0m [0;32mimport[0m [0mmatplotlib[0m[0;34m.[0m[0mpyplot[0m [0;32mas[0m [0mplt[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      4[0m [0;32mimport[0m [0mmatplotlib[0m[0;34m[0m[0;34m[0m[0m
+[0;32m----> 5[0;31m [0;32mimport[0m [0mcontextily[0m [0;32mas[0m [0mctx[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      6[0m [0;32mfrom[0m [0msklearn[0m[0;34m.[0m[0mpreprocessing[0m [0;32mimport[0m [0mMinMaxScaler[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      7[0m [0;32mfrom[0m [0mscipy[0m[0;34m.[0m[0mstats[0m[0;34m.[0m[0mmstats[0m [0;32mimport[0m [0mwinsorize[0m[0;34m[0m[0;34m[0m[0m
 
-[0;31mModuleNotFoundError[0m: No module named 'adjustText'
-ModuleNotFoundError: No module named 'adjustText'
+[0;31mModuleNotFoundError[0m: No module named 'contextily'
+ModuleNotFoundError: No module named 'contextily'
 
