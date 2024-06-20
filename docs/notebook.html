@@ -655,7 +655,7 @@ GDP, Total expenditure, BMI, thinness 1-19 years,Alcohol</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_46629</span><span class="o">/</span><span class="mf">1580431079.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_49072</span><span class="o">/</span><span class="mf">1580431079.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -896,28 +896,30 @@ GDP, Total expenditure, BMI, thinness 1-19 years,Alcohol</p>
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_40485/2409927893.py:95: UserWarning:
-
-Only specify one of &#39;column&#39; or &#39;color&#39;. Using &#39;color&#39;.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_48832/2409927893.py:10: FutureWarning: The geopandas.dataset module is deprecated and will be removed in GeoPandas 1.0. You can get the original &#39;naturalearth_lowres&#39; data from https://www.naturalearthdata.com/downloads/110m-cultural-vectors/.
+  border = gpd.read_file(gpd.datasets.get_path(&#39;naturalearth_lowres&#39;))
+/tmp/ipykernel_48832/2409927893.py:29: FutureWarning: Downcasting behavior in `replace` is deprecated and will be removed in a future version. To retain the old behavior, explicitly call `result.infer_objects(copy=False)`. To opt-in to the future behavior, set `pd.set_option(&#39;future.no_silent_downcasting&#39;, True)`
+  data[&#39;Var1_Class&#39;] = data[&#39;Var1_Class&#39;].replace(d)
+/tmp/ipykernel_48832/2409927893.py:61: FutureWarning: The geopandas.dataset module is deprecated and will be removed in GeoPandas 1.0. You can get the original &#39;naturalearth_lowres&#39; data from https://www.naturalearthdata.com/downloads/110m-cultural-vectors/.
+  border = gpd.read_file(gpd.datasets.get_path(&#39;naturalearth_lowres&#39;))
+/tmp/ipykernel_48832/2409927893.py:95: UserWarning: Only specify one of &#39;column&#39; or &#39;color&#39;. Using &#39;color&#39;.
+  merged_data.to_crs(&#39;EPSG:3857&#39;).plot(ax=ax,
 </pre></div>
 </div>
 <img alt="../_images/b267af990e596e6e65be4c9e30fd9c8baaed1fc95f40a563ac2d90560256a7b8.png" src="../_images/b267af990e596e6e65be4c9e30fd9c8baaed1fc95f40a563ac2d90560256a7b8.png" />
 <img alt="../_images/d93fe66a76ccd835123468a904286a027a5d5680e7f0bd76e9806d331ff06dec.png" src="../_images/d93fe66a76ccd835123468a904286a027a5d5680e7f0bd76e9806d331ff06dec.png" />
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_40485/2409927893.py:176: SettingWithCopyWarning:
-
-
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_48832/2409927893.py:176: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame.
 Try using .loc[row_indexer,col_indexer] = value instead
 
 See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
-
-/tmp/ipykernel_40485/2409927893.py:177: SettingWithCopyWarning:
-
-
+  second_df[&#39;z_score_GDP&#39;] = zscore(second_df[&#39;GDP&#39;])
+/tmp/ipykernel_48832/2409927893.py:177: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame.
 Try using .loc[row_indexer,col_indexer] = value instead
 
 See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  second_df[&#39;z_score_Value&#39;] = zscore(second_df[&#39;Value&#39;])
 </pre></div>
 </div>
 <img alt="../_images/4ab90e9cb9454638f0818e7497abdad4eb1e78e27cb27af36a1059dee20f41c0.png" src="../_images/4ab90e9cb9454638f0818e7497abdad4eb1e78e27cb27af36a1059dee20f41c0.png" />
